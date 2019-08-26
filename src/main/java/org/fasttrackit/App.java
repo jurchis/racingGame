@@ -33,6 +33,10 @@ public class App
         //How to read/ display the properties of the car
 
         //System.out searched using sout
+
+        //CTRL D is duplicating my line
         System.out.println(car.name);
+        System.out.println(car.travelDistance);
+
     }
 }
