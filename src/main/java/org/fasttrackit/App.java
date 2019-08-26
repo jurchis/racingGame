@@ -17,6 +17,8 @@ public class App
         Car car = new Car();
 
         //Car() is the class constructor, it has been created in the memory, we don't have access to it so we'll create
+        //There is stored the reference of an object and not the actual object from the memory, we use the ref as a rem
+        //control. In Java I have access to the remote control, but not to the actual RAM memory
         //An object type Car Car car=new Car();
         //We define the class Car and create a variable type car with it
         //Classes are in uppercase while the vars in lowercase
