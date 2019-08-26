@@ -23,11 +23,16 @@ public class App
         //We define the class Car and create a variable type car with it
         //Classes are in uppercase while the vars in lowercase
 
+        //This is our first car for which we gave values
         car.name="Dacia";
         car.fuelLevel = 60;
         car.mileage = 8.5;
         car.doorCount = 180;
         car.fuelType = "Gasoline";
         //All the time the code should be in EN
+        //How to read/ display the properties of the car
+
+        //System.out searched using sout
+        System.out.println(car.name);
     }
 }
