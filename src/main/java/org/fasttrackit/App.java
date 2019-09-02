@@ -3,6 +3,8 @@ package org.fasttrackit;
 //with ctrl q on the functions it helps you with the function
 //with green on the left side is showing what has been changed
 
+import java.util.Scanner;
+
 /**
  * Hello world!
  *
@@ -61,5 +63,14 @@ public class App
 
         System.out.println("Car name 2 is: " + car2.name);
 
+        //% is modulo and not percentage
+        System.out.println("Modulo examples");
+        System.out.println(4%2);
+        System.out.println(4%3);
+
+        System.out.println("Please enter some text:");
+        Scanner scannerX = new Scanner(System.in);
+        String text = scannerX.nextLine(); //reading a row written by the user
+        System.out.println("Input from user: " + text);
     }
 }

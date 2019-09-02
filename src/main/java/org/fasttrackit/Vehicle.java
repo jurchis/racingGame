@@ -30,6 +30,10 @@ public class Vehicle {
         System.out.println("Used fuel:" + usedFuel);
         fuelLevel -= usedFuel;
 
+        //incrementing or decrementing
+        //fuelLevel++; we add 1 to fuelLevel value
+        //fuelLevel--;
+
         //CTRL+ALT+L is arranging in a nice way the code
         System.out.println("Remaining fuel level is:" + fuelLevel);
 
