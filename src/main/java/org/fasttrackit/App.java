@@ -29,6 +29,11 @@ public class App
         car.mileage = 8.5;
         car.doorCount = 180;
         car.fuelType = "Gasoline";
+
+        Engine engine = new Engine();
+        engine.manufacturer="Renault";
+        engine.capacity=2000;
+
         //All the time the code should be in EN
         //How to read/ display the properties of the car
 
@@ -37,6 +42,11 @@ public class App
         //CTRL D is duplicating my line
         System.out.println(car.name);
         System.out.println(car.travelDistance);
+
+        Car car2 = new Car();
+        car2.name="Golf";
+
+        System.out.println("Car name 2 is: " + car2.name);
 
     }
 }

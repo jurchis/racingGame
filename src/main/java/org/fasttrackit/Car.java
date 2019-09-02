@@ -3,16 +3,12 @@ package org.fasttrackit;
 //Clasele sunt tipuri de date complexe pe cand
 //Tipurile de date primitive sunt cu litere mici
 
-//am definit clasa Car ca si concept
-public class Car {
+//the Car class has been defined as a concept
 
-    String name;
-    double mileage;
-    double maxSpeed;
-    String fuelType;
-    double fuelLevel;
-    double travelDistance;
+//With extends we are using inheritance
+//one class is inheriting only one class
+public class Car extends AutoVehicle {
+
     int doorCount;
-    boolean running;
 
 }
