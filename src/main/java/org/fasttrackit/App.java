@@ -43,6 +43,10 @@ public class App
         System.out.println(car.name);
         System.out.println(car.travelDistance);
 
+        //we are accelerating with the car. We'll call the object and give him the activity/method
+        //we start from the object and give it a method
+        car.accelerate(60, 1);
+
         Car car2 = new Car();
         car2.name="Golf";
 
