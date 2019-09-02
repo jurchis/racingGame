@@ -27,7 +27,7 @@ public class App
         car.name="Dacia";
         car.fuelLevel = 60;
         car.mileage = 8.5;
-        car.doorCount = 180;
+        car.doorCount = 4;
         car.fuelType = "Gasoline";
 
         Engine engine = new Engine();
@@ -45,6 +45,15 @@ public class App
 
         Car car2 = new Car();
         car2.name="Golf";
+
+        car2.fuelLevel = 60;
+        car2.mileage = 8.5;
+        car2.doorCount = 4;
+        car2.fuelType = "Diesel";
+
+        Engine engine2 = new Engine();
+        engine2.manufacturer="VW";
+        engine2.capacity=3000;
 
         System.out.println("Car name 2 is: " + car2.name);
 
