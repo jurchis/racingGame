@@ -14,7 +14,11 @@ public class App
         //click in the current line and CTRL X will remove the line
         //we create an object type Car, the class Car has already been created
 
-        Car car = new Car();
+        Engine engine = new Engine();
+        engine.manufacturer="Renault";
+        engine.capacity=2000;
+
+        Car car = new Car(engine);
 
         //Car() is the class constructor, it has been created in the memory, we don't have access to it so we'll create
         //There is stored the reference of an object and not the actual object from the memory, we use the ref as a rem
@@ -30,10 +34,6 @@ public class App
         car.doorCount = 4;
         car.fuelType = "Gasoline";
 
-        Engine engine = new Engine();
-        engine.manufacturer="Renault";
-        engine.capacity=2000;
-
         //All the time the code should be in EN
         //How to read/ display the properties of the car
 
@@ -46,18 +46,18 @@ public class App
         //we are accelerating with the car. We'll call the object and give him the activity/method
         //we start from the object and give it a method
         car.accelerate(60, 1);
+        Engine engine2 = new Engine();
+        engine2.manufacturer="VW";
+        engine2.capacity=1600;
 
-        Car car2 = new Car();
+        //by creating a CONSTRUCTOR we are forced to create a car only with an engine
+        Car car2 = new Car(engine2);
         car2.name="Golf";
 
         car2.fuelLevel = 60;
         car2.mileage = 8.5;
         car2.doorCount = 4;
         car2.fuelType = "Diesel";
-
-        Engine engine2 = new Engine();
-        engine2.manufacturer="VW";
-        engine2.capacity=3000;
 
         System.out.println("Car name 2 is: " + car2.name);
 

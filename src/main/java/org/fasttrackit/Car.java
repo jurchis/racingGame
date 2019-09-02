@@ -7,8 +7,14 @@ package org.fasttrackit;
 
 //With extends we are using inheritance
 //one class is inheriting only one class
+
+//ALT+ENTER to create constructor matching super. Super:Parent
 public class Car extends AutoVehicle {
 
     int doorCount;
 
+    public Car(Engine engine) {
+        super(engine);
+        System.out.println("LOG: Creating a car");
+    }
 }
