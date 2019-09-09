@@ -36,6 +36,8 @@ public class App
         car.doorCount = 5;
         car.setFuelType("Gasoline");
 
+        System.out.println("Car object: "+car.toString());
+
         //All the time the code should be in EN
         //How to read/ display the properties of the car
 
@@ -63,17 +65,17 @@ public class App
 
         System.out.println("Car name 2 is: " + car2.getName());
 
-        //% is modulo and not percentage
-        System.out.println("Modulo examples");
-        System.out.println(4%2);
-        System.out.println(4%3);
+//        //% is modulo and not percentage
+//        System.out.println("Modulo examples");
+//        System.out.println(4%2);
+//        System.out.println(4%3);
 
         System.out.println("Please enter some text:");
         Scanner scannerX = new Scanner(System.in);
         String text = scannerX.nextLine(); //reading a row written by the user
         System.out.println("Input from user: " + text);
 
-        System.out.println("Static variable example:");
+//        System.out.println("Static variable example:");
 
 /*        car.totalCount = 1;
         System.out.println("Total count in car: " + car.totalCount);
@@ -83,6 +85,13 @@ public class App
         System.out.println("Total count in car after setting car2: " + car.totalCount);
         System.out.println("Total count in car2: " +car2.totalCount);
         System.out.println("Total count in Car class: " +Car.totalCount);*/
+
+        car.accelerate(90,1);
+
+        HybridCar hCar = new HybridCar();
+        hCar.setName("Cheater");
+        hCar.setFuelLevel(100);
+        hCar.accelerate(90, 1);
 
 
 
