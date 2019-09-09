@@ -88,12 +88,19 @@ public class App
 
         car.accelerate(90,1);
 
-        HybridCar hCar = new HybridCar();
+        Vehicle hCar = new HybridCar();
+
+        //method is being used from the object type and not the reference so is the method from HybridCar and not Vehicle
+        //even if the variable is of type Vehicle
         hCar.setName("Cheater");
         hCar.setFuelLevel(100);
         hCar.accelerate(90, 1);
 
-
-
+        //Variable type is deciding the methods that we are able to use
+        //if fly() is in the object but not in the Vehicle then we cannot call it
+        //the Object decides the method
+        //hCar.fly();
+        //we solve it with TYPE CASTING
+        ((HybridCar) hCar).fly();
     }
 }

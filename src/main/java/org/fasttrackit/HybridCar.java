@@ -30,8 +30,10 @@ public class HybridCar extends Vehicle {
 
         System.out.println("Cheater!!!");
         return distance;
+    }
 
-
+    public void fly() {
+        System.out.println("Flying!!!");
     }
 
 }
