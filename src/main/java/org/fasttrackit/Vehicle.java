@@ -76,6 +76,12 @@ public class Vehicle {
         this.running = running;
     }
 
+
+//  Overloading the method. By default the value will be 1
+    public double accelerate(double speed){
+        return accelerate(speed, 1);
+    }
+
     //below is a method
     //"public double accelerate" method signature
     //stout working only in methods
