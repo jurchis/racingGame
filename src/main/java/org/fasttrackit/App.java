@@ -30,11 +30,11 @@ public class App
         //Classes are in uppercase while the vars in lowercase
 
         //This is our first car for which we gave values
-        car.name="Dacia";
-        car.fuelLevel = 60;
-        car.mileage = 8.5;
-        car.doorCount = 4;
-        car.fuelType = "Gasoline";
+        car.setName("Dacia");
+        car.setFuelLevel(60);
+        car.setMileage(8.5);
+        car.doorCount = 5;
+        car.setFuelType("Gasoline");
 
         //All the time the code should be in EN
         //How to read/ display the properties of the car
@@ -42,8 +42,8 @@ public class App
         //System.out searched using sout
 
         //CTRL D is duplicating my line
-        System.out.println(car.name);
-        System.out.println(car.travelDistance);
+        System.out.println(car.getName());
+        System.out.println(car.getTravelDistance());
 
         //we are accelerating with the car. We'll call the object and give him the activity/method
         //we start from the object and give it a method
@@ -54,14 +54,14 @@ public class App
 
         //by creating a CONSTRUCTOR we are forced to create a car only with an engine
         Car car2 = new Car(engine2);
-        car2.name="Golf";
+        car2.setName("Golf");
 
-        car2.fuelLevel = 60;
-        car2.mileage = 8.5;
+        car2.setFuelLevel(60);
+        car2.setMileage(8.5);
         car2.doorCount = 4;
-        car2.fuelType = "Diesel";
+        car2.setFuelType("Diesel");
 
-        System.out.println("Car name 2 is: " + car2.name);
+        System.out.println("Car name 2 is: " + car2.getName());
 
         //% is modulo and not percentage
         System.out.println("Modulo examples");
@@ -72,5 +72,19 @@ public class App
         Scanner scannerX = new Scanner(System.in);
         String text = scannerX.nextLine(); //reading a row written by the user
         System.out.println("Input from user: " + text);
+
+        System.out.println("Static variable example:");
+
+/*        car.totalCount = 1;
+        System.out.println("Total count in car: " + car.totalCount);
+
+        car2.totalCount = 12; //we should only call static vars eg.: from the class itself Car
+        //not from the variable containing an object of that class
+        System.out.println("Total count in car after setting car2: " + car.totalCount);
+        System.out.println("Total count in car2: " +car2.totalCount);
+        System.out.println("Total count in Car class: " +Car.totalCount);*/
+
+
+
     }
 }
