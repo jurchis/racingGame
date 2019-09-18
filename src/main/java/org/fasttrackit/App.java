@@ -98,7 +98,7 @@ public class App
 
         //Variable type is deciding the methods that we are able to use
         //if fly() is in the object but not in the Vehicle then we cannot call it
-        //the Object decides the method
+        //the Object decides the methods
         //hCar.fly();
         //we solve it with TYPE CASTING
         ((HybridCar) hCar).fly();

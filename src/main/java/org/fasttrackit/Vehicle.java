@@ -88,6 +88,11 @@ public class Vehicle {
     //a method is called in method and not class
     //because we are in the vehicle class, we only write name instead of Car.name
     public double accelerate(double speed, double durationInHours) {
+
+        if (speed>maxSpeed){
+            System.out.println("Maximum speed exceeded");
+            return 0;
+        }
         System.out.println(name + " is accelerating with " +
                 speed + " km/h for " + durationInHours + "h.");
 
@@ -110,9 +115,7 @@ public class Vehicle {
         System.out.println("Remaining fuel level is:" + fuelLevel);
 
         return distance;
-
     }
-
 
     @Override
     public String toString() {
