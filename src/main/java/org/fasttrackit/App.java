@@ -89,8 +89,8 @@ public class App
         car.accelerate(90,1);
 
         Vehicle hCar = new HybridCar();
-
-        //method is being used from the object type and not the reference so is the method from HybridCar and not Vehicle
+        //method is being used from the object type and not the reference
+        //so is the method from HybridCar and not Vehicle
         //even if the variable is of type Vehicle
         hCar.setName("Cheater");
         hCar.setFuelLevel(100);
