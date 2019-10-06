@@ -60,7 +60,7 @@ public class Game {
         System.out.println("Available tracks:");
         for (int i = 0; i < tracks.length; i++){
             if (tracks[i] != null){
-                System.out.println("Track no. "+i+". Name: "+tracks[i].getName() +" - Length: "+ tracks[i].getLength() + " km.");
+                System.out.println("Track no. "+(i+1)+". Name: "+tracks[i].getName() +" - Length: "+ tracks[i].getLength() + " km.");
             }
         }
     }
