@@ -77,8 +77,8 @@ public class Vehicle {
     }
 
 
-//  Overloading the method. By default the value will be 1
-    public double accelerate(double speed){
+    //  Overloading the method. By default the value will be 1
+    public double accelerate(double speed) {
         return accelerate(speed, 1);
     }
 
@@ -89,12 +89,12 @@ public class Vehicle {
     //because we are in the vehicle class, we only write name instead of Car.name
     public double accelerate(double speed, double durationInHours) {
 
-        if (speed>maxSpeed){
+        if (speed > maxSpeed) {
             System.out.println("Maximum speed exceeded");
             return 0;
         }
 
-        if (fuelLevel<=0){
+        if (fuelLevel <= 0) {
             System.out.println("You are out of fuel...");
             return 0;
         }

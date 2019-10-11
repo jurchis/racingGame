@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class AutoVehicle extends  Vehicle{
+public class AutoVehicle extends Vehicle {
 
     //we constrain the class to have an engine by adding a constrained the AutoVehicles to be created all the time with
     //A constructor
@@ -17,7 +17,7 @@ public class AutoVehicle extends  Vehicle{
 
     //we create a blank engine for the class. engine default
     //constructor overloading
-    public AutoVehicle(){
+    public AutoVehicle() {
 //        this.engine = new Engine();
         this(new Engine());
     }

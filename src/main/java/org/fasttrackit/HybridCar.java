@@ -20,8 +20,8 @@ public class HybridCar extends Vehicle {
 
     @Override
     public double accelerate(double speed, double durationInHours) {
-        System.out.println(getName()+" is accelerating with "+speed+" for "+ durationInHours +" h.");
-        double actualSpeed = 2*speed;
+        System.out.println(getName() + " is accelerating with " + speed + " for " + durationInHours + " h.");
+        double actualSpeed = 2 * speed;
         double distance = actualSpeed * durationInHours;
         System.out.println("Distance: " + distance);
         setTravelDistance(getTravelDistance() + distance);
