@@ -1,7 +1,9 @@
 package org.fasttrackit;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
@@ -26,9 +28,31 @@ public class Game {
         initializeCompetitors();
     }
 
+    private int getCompetitorCountFromUser(){
+        System.out.println("Please enter number of players:");
+        Scanner scanner = new Scanner(System.in);
+
+        //try catch finally or try finally, try alone does not work
+        //we can replace in track throw new which is throwing new error
+        //we are instead using a sout instead of throw new
+        try{
+            return scanner.nextInt();
+        }
+        catch (InputMismatchException e) {
+            throw new RuntimeException("You have entered an invalid number.");
+        }
+//        catch(NullPointerException e){
+//            throw new NullPointerException("Sorry);
+//        }
+//        return 0;
+        finally {
+            System.out.println("Finally block is always executed;");
+        }
+    }
+
     private void initializeCompetitors(){
         System.out.println("Today's competitors are:");
-        int competitorCount = 2;
+        int competitorCount = getCompetitorCountFromUser();
         for (int i = 0; i<competitorCount; i++){
             Vehicle competitor = new Vehicle();
             competitor.setName("Competitor " + i);
