@@ -36,6 +36,7 @@ public class Game {
         //try catch finally or try finally, try alone does not work
         //we can replace in track throw new which is throwing new error
         //we are instead using a sout instead of throw new
+        //InputMismatchException can be replaced by RunTimeException or even the father Exception
         try {
             return scanner.nextInt();
         } catch (InputMismatchException e) {

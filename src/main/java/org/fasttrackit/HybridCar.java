@@ -13,6 +13,7 @@ public class HybridCar extends Vehicle {
     //if name cheater
 
     //co-variant return type!!!!!!!!!!!!!!!
+    //in co-variant we just reduce the exception range but we are not allowed to extend it
     @Override
     protected HybridCar clone() throws CloneNotSupportedException {
         return new HybridCar();
