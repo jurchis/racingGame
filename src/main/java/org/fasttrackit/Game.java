@@ -33,10 +33,12 @@ public class Game {
         int competitorsWithoutFuel = 0;
 
         while (winnerNotKnown && competitorsWithoutFuel < competitors.size()) {
+            System.out.println("New round...");
             //take value from competitors and save it in vehicle which is a var of type Vehicle
             //at each iteration in Var vehicle will be saved one by one elements from the list
             //for-each - enhanced for loop
             for (Vehicle vehicle : competitors) {
+                System.out.println("\nIt's " +vehicle.getName()+"'s turn.");
                 double speed = getAccelerationSpeedFromUser();
                 vehicle.accelerate(speed, 1);
 
