@@ -28,6 +28,27 @@ public class Game {
         displayTracks();
         Track selectedTrack = getSelectedTrackFromUser();
         initializeCompetitors();
+
+        //take value from competitors and save it in vehicle which is a var of type Vehicle
+        //at each iteration in Var vehicle will be saved one by one elements from the list
+        //for-each - enhanced for loop
+        for (Vehicle vehicle : competitors) {
+            double speed = getAccelerationSpeedFromUser();
+            vehicle.accelerate(speed, 1);
+        }
+    }
+
+    private double getAccelerationSpeedFromUser() {
+        System.out.println("Please enter acceleration speed:");
+        Scanner scanner = new Scanner(System.in);
+        try {
+            return scanner.nextDouble();
+//            double speed = scanner.nextDouble();
+//            return speed;
+        } catch (InputMismatchException e) {
+            System.out.println("You have entered an invalid acceleration number speed.");
+            return getAccelerationSpeedFromUser();
+        }
     }
 
     private Track getSelectedTrackFromUser() {
