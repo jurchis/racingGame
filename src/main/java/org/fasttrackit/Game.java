@@ -29,12 +29,27 @@ public class Game {
         Track selectedTrack = getSelectedTrackFromUser();
         initializeCompetitors();
 
-        //take value from competitors and save it in vehicle which is a var of type Vehicle
-        //at each iteration in Var vehicle will be saved one by one elements from the list
-        //for-each - enhanced for loop
-        for (Vehicle vehicle : competitors) {
-            double speed = getAccelerationSpeedFromUser();
-            vehicle.accelerate(speed, 1);
+        boolean winnerNotKnown = true;
+        int competitorsWithoutFuel = 0;
+
+        while (winnerNotKnown && competitorsWithoutFuel < competitors.size()) {
+            //take value from competitors and save it in vehicle which is a var of type Vehicle
+            //at each iteration in Var vehicle will be saved one by one elements from the list
+            //for-each - enhanced for loop
+            for (Vehicle vehicle : competitors) {
+                double speed = getAccelerationSpeedFromUser();
+                vehicle.accelerate(speed, 1);
+
+                if (selectedTrack.getLength() <= vehicle.getTravelDistance()) {
+                    winnerNotKnown = false;
+                    System.out.println("The winner is: " + vehicle.getName());
+                    break;
+                }
+
+                if (vehicle.getFuelLevel() <= 0) {
+                    competitorsWithoutFuel++;
+                }
+            }
         }
     }
 
@@ -46,20 +61,19 @@ public class Game {
 //            double speed = scanner.nextDouble();
 //            return speed;
         } catch (InputMismatchException e) {
-            System.out.println("You have entered an invalid acceleration number speed.");
+            System.out.println("You have entered an invalid acceleration number speed!");
             return getAccelerationSpeedFromUser();
         }
     }
 
     private Track getSelectedTrackFromUser() {
-        System.out.println("Please select a track corresponding number.");
+        System.out.println("Please select a track corresponding number:");
         Scanner scanner = new Scanner(System.in);
-
         try {
             int userChoice = scanner.nextInt();
             return tracks[userChoice - 1];
         } catch (InputMismatchException | ArrayIndexOutOfBoundsException | NullPointerException e) {
-            System.out.println("You have entered an invalid track number");
+            System.out.println("You have entered an invalid track number!");
             //recursion - a method calling itself
             return getSelectedTrackFromUser();
         }
